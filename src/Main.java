@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Collections;
 
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задача 1");
@@ -34,9 +35,13 @@ public class Main {
         System.out.println("Средняя сумма трат за месяц составила " + sum2 / averageExpenses.length + " рублей");
 
         System.out.println("Задача 4");
-        char [] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length-1; i >= 0 ; i--){
-            System.out.print(reverseFullName[i]);
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        char temp;
+        for (int i = 0; i < reverseFullName.length / 2; i++) {
+            temp = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
+            reverseFullName[reverseFullName.length - 1 - i] = temp;
+        }
+        System.out.println(reverseFullName);
         }
     }
-}
